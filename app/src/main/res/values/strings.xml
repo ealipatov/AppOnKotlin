@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AppOnKotlin</string>
+    <string name="test_app_on_kotlin">Тестовое приложение на котлин</string>
+    <string name="any_button">Какая-то кнопка</string>
+    <string name="any_text">какой-то текст</string>
+    <string name="btn_is_pressed">Нажата кнопка</string>
 </resources>
