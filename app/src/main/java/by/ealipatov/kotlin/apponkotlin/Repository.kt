@@ -4,7 +4,7 @@ import kotlin.collections.ArrayList
 
 object Repository {
 
-    private var dataList: ArrayList<AnyDataClass> = ArrayList()
+    private val dataList: ArrayList<AnyDataClass> = ArrayList()
 
     fun getDataList(): ArrayList<AnyDataClass> {
         return dataList
