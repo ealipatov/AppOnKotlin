@@ -11,11 +11,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val text : TextView = findViewById(R.id.title_text)
+        val namePropertyText : TextView = findViewById(R.id.name_property_text)
+        val dataText : TextView = findViewById(R.id.data_text)
+
+        val dataClass = AnyDataClass("Эполит", 25)
+        val copyDataClass = dataClass.copy(name = "Федот")
+
+        val listDataClass = ArrayList<AnyDataClass>()
+
+        listDataClass.add(dataClass)
+        listDataClass.add(copyDataClass)
 
         findViewById<AppCompatButton>(R.id.btn_test).setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                text.text = getString(R.string.btn_is_pressed)
+
+                namePropertyText.text = dataClass.propertyName()
+                dataText.text = listDataClass.toString()
+
             }
         })
     }
