@@ -13,14 +13,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Найдем нужные тектовые вьюхи
-        val namePropertyText : TextView = findViewById(R.id.name_property_text)
-        val dataText : TextView = findViewById(R.id.data_text)
+        val namePropertyText: TextView = findViewById(R.id.name_property_text)
+        val dataText: TextView = findViewById(R.id.data_text)
 
         //Инициализируем список
         Repository.initDataList()
 
         //Повесим слушатель на кнопку и выведем нужную информацию на экран при нажатии
-        findViewById<AppCompatButton>(R.id.btn_test).setOnClickListener(object : View.OnClickListener {
+        findViewById<AppCompatButton>(R.id.btn_test).setOnClickListener(object :
+            View.OnClickListener {
             override fun onClick(v: View?) {
 
                 //Выведем наименование свойств
@@ -33,7 +34,8 @@ class MainActivity : AppCompatActivity() {
 
         //Проверка работы разных циклов
 
-        val number = listOf("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+        val number =
+            listOf("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 
         Log.d("***", "Используем forEach")
         number.forEach {
@@ -56,32 +58,50 @@ class MainActivity : AppCompatActivity() {
         }
 
         Log.d("***", "Используем for для обратной последовательности с шагом 2")
-        for(i in 10 downTo 1 step 2) {
+        for (i in 10 downTo 1 step 2) {
             Log.d("***", "$i")
         }
 
-        Log.d("***","Проверяем работу until")
-        for(i in 0 until number.size-1) {
-            if(number[i] == "five") {
+        Log.d("***", "Проверяем работу until")
+        for (i in 0 until number.size - 1) {
+            if (number[i] == "five") {
                 Log.d("***", number[i])
             }
         }
 
-        Log.d("***","Используем when")
-
-        when(Numbers.Six){
-            Numbers.Zero -> {Log.d("***","Ноль")}
-            Numbers.One -> {Log.d("***","Один")}
-            Numbers.Two -> {Log.d("***","Два")}
-            Numbers.Three -> {Log.d("***","Три")}
-            Numbers.Four -> {Log.d("***","Четыре")}
-            Numbers.Five -> {Log.d("***","Пять")}
-            Numbers.Six -> {Log.d("***","Шесть")}
-            Numbers.Seven -> {Log.d("***","Семь")}
-            Numbers.Eight -> {Log.d("***","Восемь")}
-            Numbers.Nine -> {Log.d("***","Девять")}
+        Log.d("***", "Используем when")
+        when (Numbers.Six) {
+            Numbers.Zero -> {
+                Log.d("***", "Ноль")
+            }
+            Numbers.One -> {
+                Log.d("***", "Один")
+            }
+            Numbers.Two -> {
+                Log.d("***", "Два")
+            }
+            Numbers.Three -> {
+                Log.d("***", "Три")
+            }
+            Numbers.Four -> {
+                Log.d("***", "Четыре")
+            }
+            Numbers.Five -> {
+                Log.d("***", "Пять")
+            }
+            Numbers.Six -> {
+                Log.d("***", "Шесть")
+            }
+            Numbers.Seven -> {
+                Log.d("***", "Семь")
+            }
+            Numbers.Eight -> {
+                Log.d("***", "Восемь")
+            }
+            Numbers.Nine -> {
+                Log.d("***", "Девять")
+            }
         }
-
 
     }
 

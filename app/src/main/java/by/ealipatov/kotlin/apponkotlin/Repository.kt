@@ -6,7 +6,6 @@ object Repository {
 
     private var dataList: ArrayList<AnyDataClass> = ArrayList()
 
-
     fun getDataList(): ArrayList<AnyDataClass> {
         return dataList
     }
